@@ -88,7 +88,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const userAction = (tile, index) => {
     if(isValidAction(tile) && isGameActive) {
-        // แก้ไขเส้นทางของภาพที่นี่
         const imgSrc = currentPlayer === 'X' ? 'img/alien.jpg' : 'img/cat.jpg'; 
         tile.innerHTML = `<img src="${imgSrc}" class="player-img">`;
         tile.classList.add(`player${currentPlayer}`);

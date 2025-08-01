@@ -35,7 +35,6 @@
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
     max-width: 300px;
-
 }
 
 .tile {
@@ -67,40 +66,13 @@
 
 .controls button {
     color: white;
-    padding: 8px;
+    padding: 10px 20px; /* เพิ่ม padding เพื่อให้ปุ่มใหญ่ขึ้น */
     border-radius: 8px;
     border: none;
     font-size: 20px;
     margin-left: 1em;
     cursor: pointer;
-}
-
-.restart {
-    background-color: #498AFB;
-}
-
-#reset {
-    background-color: #FF3860;
-}
-
-.player-img {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
-}
-
-.tile img {
-    max-width: 90%;
-    max-height: 90%;
-}
-.controls button {
-    color: white;
-    padding: 8px;
-    border-radius: 8px;
-    border: none;
-    font-size: 20px;
-    margin-left: 1em;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 /* ปุ่ม Reset */
@@ -111,4 +83,20 @@
 /* ปุ่ม Back ให้เหมือนกับปุ่ม Reset */
 #back {
     background-color: #FF3860; /* สีแดง */
+}
+
+/* การตอบสนอง (responsive) สำหรับอุปกรณ์ที่มีขนาดหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .controls button {
+        padding: 15px 30px; /* เพิ่มขนาดของปุ่มบนมือถือ */
+        font-size: 18px; /* ลดขนาดฟอนต์ให้พอดี */
+    }
+}
+
+/* การตอบสนอง (responsive) สำหรับหน้าจอที่เล็กกว่า 480px */
+@media (max-width: 480px) {
+    .controls button {
+        padding: 12px 25px; /* เพิ่มขนาดให้ปุ่มใหญ่ขึ้น */
+        font-size: 16px; /* ลดขนาดฟอนต์ให้พอดีกับมือถือ */
+    }
 }
