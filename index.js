@@ -88,7 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const userAction = (tile, index) => {
     if(isValidAction(tile) && isGameActive) {
-        const imgSrc = currentPlayer === 'X' ? 'img/alien.jpg' : 'img/cat.jpg'; 
+        const imgSrc = currentPlayer === 'X' ? 'img/alien.png' : 'img/cat.png'; 
         tile.innerHTML = `<img src="${imgSrc}" class="player-img">`;
         tile.classList.add(`player${currentPlayer}`);
         updateBoard(index);
